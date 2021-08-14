@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title routerLink="/profil-choice">
+      Texte du profil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="top" horizontal="end" edge slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="ellipsis-horizontal"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list class="md fab-list-side-bottom hydrated">
+          <ion-fab-button color="light" class="ion-color ion-color-light md fab-button-in-list ion-activatable ion-focusable hydrated fab-button-show">
+            <ion-icon name="add" role="img" class="md hydrated" aria-label="Logo Facebook"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button color="light" class="ion-color ion-color-light md fab-button-in-list ion-activatable ion-focusable hydrated fab-button-show">
+            <ion-icon name="filter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button routerLink="/profil-param" color="light" class="ion-color ion-color-light md fab-button-in-list ion-activatable ion-focusable hydrated fab-button-show">
+            <ion-icon name="options" role="img" class="md hydrated" aria-label="logo vimeo"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+  </ion-fab>
+
+  <ion-refresher slot="fixed" (ionRefresh)="refreshPage()">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ng-container *ngFor="let cat of catsJson[0]">
+  <div class="catego">
+    <ion-title style="background-color: #{{cat.hexColor}};" >{{cat.libelle}}</ion-title>
+
+    <div class="scrolling-wrapper">
+      <ng-container *ngFor="let audio of audiosJson[0]" >
+        <div class="card" *ngIf="audio.idCategorie == '/api/categories/'+cat.idCategorie">
+          <circle-progress (click)="playPause()" [percent]="percent" [maxPercent]="maxPercent" [radius]="radius" ></circle-progress>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  </ng-container>
+  <!--<ion-backdrop visible="false"></ion-backdrop>-->
+
+</ion-content>

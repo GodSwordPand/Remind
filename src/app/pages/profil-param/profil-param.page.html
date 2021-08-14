@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nom du profil</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="secondary" (click)="presentActionSheet()">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-title class="titre_param">Qui a accès ?</ion-title>
+
+  <ion-card>
+    <ion-item href="#" class="ion-activated">
+      <ion-avatar slot="start">
+        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+      </ion-avatar>
+      <ion-label>Kev1</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-item>
+    <ion-label><ion-title>Theme</ion-title></ion-label>
+    <ion-select value="white">
+      <ion-select-option value="white">White</ion-select-option>
+      <ion-select-option value="bleu">Bleu</ion-select-option>
+      <ion-select-option value="dark">Dark</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+</ion-content>

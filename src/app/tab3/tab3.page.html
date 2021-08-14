@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Mon compte</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="secondary" (click)="presentActionSheet()">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row style="padding: 10px;" class="ion-justify-content-center ion-nowrap">
+    <ion-avatar>
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+  </ion-row>
+
+  <ion-title>Pseudo</ion-title>
+  <ion-card>
+    <ion-item>
+      <ion-input value="M. Kevin"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-title>E-mail</ion-title>
+  <ion-card>
+    <ion-item>
+      <ion-input value="azertygdsrg@"></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-title>Mot de passe</ion-title>
+  <ion-card>
+    <ion-item>
+      <ion-label type="password" value="gfdggdf">Password</ion-label>
+    </ion-item>
+  </ion-card>
+  <ion-input type="password" value="gfdggdf"></ion-input>
+
+<ion-button type="submit" color="light" expand="block" shape="round">Enregistrer</ion-button>
+
+
+</ion-content>
