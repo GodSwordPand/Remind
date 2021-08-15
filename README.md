@@ -12,7 +12,7 @@ node.js >= 13.11.0
 ionic >= 6.12.2
 ```
 
-Avoir le serveur de l'api [Remind-api](https://github.com/GodSwordPand/Remind-api) demarré.
+Avoir le serveur de l'api [Remind-api](https://github.com/VPKevin/Remind-api) demarré.
 
 ## Installation
 
@@ -21,11 +21,11 @@ Avoir le serveur de l'api [Remind-api](https://github.com/GodSwordPand/Remind-ap
 En premier lieu, importez le projet :
 
 ``` bash
-git clone https://github.com/GodSwordPand/Remind.git
+git clone https://github.com/VPKevin/Remind.git
 cd remind
 ```
 
-#### Configuration de la l'API [Remind-api](https://github.com/GodSwordPand/Remind-api)
+#### Configuration de la l'API [Remind-api](https://github.com/VPKevin/Remind-api)
 
 Adaptez le fichier __environment.ts__ en fonction de l'adresse utilisée par votre API.
 ```
@@ -50,7 +50,7 @@ ionic serve -l
 
 Apres avoir démarré ionic une page web devrait s'ouvrir sur votre navigateur, autrement ouvrez une page web à http://localhost:8100/,
 si vous utilisé Ionic Lab à http://localhost:8200/.  
-La page de connexion devrait s'afficher, si vous avez ajouté les données fictives fournit avec [Remind-api](https://github.com/GodSwordPand/Remind-api) vous pouvez utilisée les identifiants fournit.
+La page de connexion devrait s'afficher, si vous avez ajouté les données fictives fournit avec [Remind-api](https://github.com/VPKevin/Remind-api) vous pouvez utilisée les identifiants fournit.
 ```
 Email : azerty@test.fr
 Mot de passe : azerty1234
